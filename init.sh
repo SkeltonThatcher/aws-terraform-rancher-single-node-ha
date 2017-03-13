@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 PROJECT="$(basename `pwd`)"
-BUCKET="project-terraform-state"
+BUCKET="existing-s3-bucket"
 REGION="eu-west-1"
 
 init() {
