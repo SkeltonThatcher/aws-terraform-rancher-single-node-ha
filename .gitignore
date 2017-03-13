@@ -1,4 +1,5 @@
 ._*
+init.sh
 .terraform*
 terraform.tfvars
 terraform.tfstate
