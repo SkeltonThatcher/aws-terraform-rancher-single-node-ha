@@ -35,7 +35,8 @@ The estimated deployment time from start to finish is 20-30 minutes.
 * Create an S3 bucket to hold remote state
 * Update init.sh with the S3 bucket name
 * Run init.sh to initialise remote state
-* Create and populate a terraform.tfvars file in the root of the cloned folder (see terraform.tfvars.example)
+* Create terraform.tfvars in the root of the cloned folder (see terraform.tfvars.example)
+* Set hst_max, hst_min and hst_des in terraform.tfvars to zero (0)
 * Run ***terraform plan*** from the root of the folder
 * Run ***terraform apply*** from the root of the folder
 * Wait until the installation has completed
