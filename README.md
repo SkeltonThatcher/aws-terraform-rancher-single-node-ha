@@ -37,6 +37,7 @@ The estimated deployment time from start to finish is 20-30 minutes.
 * Run init.sh to initialise remote state
 * Create terraform.tfvars in the root of the cloned folder (see terraform.tfvars.example)
 * Set hst_max, hst_min and hst_des in terraform.tfvars to zero (0)
+* Make up a temporary reg_token in terraform.tfvars
 * Run ***terraform plan*** from the root of the folder
 * Run ***terraform apply*** from the root of the folder
 * Wait until the installation has completed
