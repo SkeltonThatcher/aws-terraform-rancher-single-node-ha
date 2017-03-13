@@ -1,0 +1,29 @@
+aws_access_key = "your_aws_access_key"
+aws_secret_key = "your_aws_secret_key"
+aws_region = "aws_region_to_use"
+key_pair = "an_existing_aws_ec2_keypair_for_the_region"
+
+cidr_prefix = "two_block_cidr_prefix_for_the_vpc_such_as_10.20"
+
+dns_zone = "existing_route_53_hosted_zone_such_as_mydomain.com"
+env_name = "environment_identifier_for_deployed_resources_and_the_dns_zone_sub_domain"
+
+db_name = "name_for_the_rancher_db"
+db_username = "alphanumeric_db_username"
+db_password = "db_password"
+db_class = "db_class_such_as_db.t2.micro"
+db_storage = "amount_for_gb_of_db_storage"
+db_backup_retention = "amount_of_days_to_keep_db_backups"
+db_multi_az = "true_or_false_for_multi_or_single_az"
+
+srv_size = "rancher_server_instance_size_such_as_t2.medium"
+
+hst_size = "rancher_host_instance_size_such_as_t2.small"
+hst_max = "max_size_for_the_autoscaling_group"
+hst_min = "min_size_for_the_autoscaling_group"
+hst_des = "desired_size_for_the_autoscaling_group"
+reg_token = "rancher_hosts_registration_token"
+
+rancher_admin_name = "your_name"
+rancher_admin_username = "an_administrator_username"
+rancher_admin_password = "rancher_admin_password"
