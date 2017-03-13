@@ -1,0 +1,16 @@
+#cloud-config
+write_files:
+  - path: /opt/rancher/bin/start.sh
+    permissions: "0770"
+    content: |
+      #!/bin/sh
+      cat > /opt/rancher/bin/kickoff.sh << EOF
+      #!/bin/bash
+      while ! docker version >/dev/null 2>&1; do echo 'waiting for docker...'; sleep 2; done
+      while ! ping -c 1 8.8.8.8 >/dev/null 2>&1; do echo 'waiting for net...'; sleep 2; done
+
+      sleep 5
+      docker run -d --restart=unless-stopped -p 8080:8080 rancher/server:stable --db-port 3306 --db-host ${database_address} --db-name ${database_name} --db-user ${database_username} --db-pass ${database_password}
+      EOF
+      sudo chmod +x /opt/rancher/bin/kickoff.sh
+      sudo sh /opt/rancher/bin/kickoff.sh &
