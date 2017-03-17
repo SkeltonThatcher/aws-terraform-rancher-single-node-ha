@@ -26,9 +26,9 @@ The estimated deployment time from start to finish is 20-30 minutes.
 * Git installed and configured
 * Terraform installed and configured - https://www.terraform.io/intro/getting-started/install.html
 
-### How to use the Terraform plan to deploy Rancher server and Rancher hosts###
+### How to use the Terraform plan to deploy Rancher server and Rancher hosts
 
-####Stage One####
+####Stage One
 
 * Clone the repo
 * Create an EC2 keypair in AWS
@@ -44,7 +44,7 @@ The estimated deployment time from start to finish is 20-30 minutes.
 * Access Rancher server at the displayed output URL
 * Log in with the name and password specified in the terraform.tfvars file
 
-####Stage Two####
+####Stage Two
 * Enable hosts registration from within Rancher and copy the token from the registration string. The token will be in the format similar to *6C8B0D1B2E95DD1AA07A:1483142400000:PKQGzShMCv3wtD02DvlU4MkBY0*
 * Update reg_token in terraform.tfvars with the registration token
 * Update hst_max, hst_min and hst_des in terraform.tfvars with the max, min and desired amount of host instances
@@ -53,10 +53,10 @@ The estimated deployment time from start to finish is 20-30 minutes.
 * The launch configuration will be replaced with a new version and applied to the auto scaling group
 * The specified amount of host instances will launch and register with the Rancher server
 
-####How to remove####
+####How to remove
 * To remove all deployed resources run ***terraform destroy***
 
-### Licence ###
+### Licence
 
 Copyright (c) 2017 Skelton Thatcher Consulting Ltd.
 
