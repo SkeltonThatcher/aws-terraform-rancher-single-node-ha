@@ -24,7 +24,7 @@ The estimated deployment time from start to finish is 20-30 minutes.
 * AWS IAM user account with AWS access/secret keys and permission to create specified resources
 * Cygwin (or similar) installed to enable running of .sh scripts if using Windows
 * Git installed and configured
-* Terraform installed and configured - https://www.terraform.io/intro/getting-started/install.html
+* Terraform installed and configured
 
 ### How to use the Terraform plan to deploy Rancher server and Rancher hosts
 
@@ -33,9 +33,9 @@ The estimated deployment time from start to finish is 20-30 minutes.
 * Clone the repo
 * Create an EC2 keypair in AWS
 * Create an S3 bucket to hold remote state
-* Update init.sh with the S3 bucket name
-* Run init.sh to initialise remote state
-* Create terraform.tfvars in the root of the cloned folder (see terraform.tfvars.example)
+* Update `init.sh` with the S3 bucket name
+* Run `init.sh` to initialise remote state
+* Create `terraform.tfvars` in the root of the cloned folder (see `terraform.tfvars.example`)
 * Set `hst_max`, `hst_min` and `hst_des` in `terraform.tfvars` to zero (0)
 * Make up a temporary reg_token in `terraform.tfvars`
 * Run `terraform plan` from the root of the folder
@@ -71,4 +71,4 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 ### Acknowledgments
 
-* Based on works produced by [George Cairns](https://www.linkedin.com/in/george-cairns-9624b621/) from [AutomationLogic](http://www.automationlogic.com/)
+* Based on works produced by [George Cairns](https://www.linkedin.com/in/george-cairns-9624b621/) from [Automation Logic](http://www.automationlogic.com/)
