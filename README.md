@@ -56,6 +56,9 @@ The estimated deployment time from start to finish is 20-30 minutes.
 #### How to remove
 * To remove all deployed resources run ***terraform destroy***
 
+### Supplemental
+*  [Container Clustering with Rancher Server (Part 5) – Automating the deployment of AWS infrastructure and Rancher with Terraform](https://skeltonthatcher.com/blog/container-clustering-rancher-server-part-5-automating-deployment-aws-infrastructure-rancher-terraform/)
+
 ### Licence
 
 Copyright (c) 2017 Skelton Thatcher Consulting Ltd.
