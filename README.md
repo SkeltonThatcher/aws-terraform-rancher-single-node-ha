@@ -36,18 +36,18 @@ The estimated deployment time from start to finish is 20-30 minutes.
 * Update init.sh with the S3 bucket name
 * Run init.sh to initialise remote state
 * Create terraform.tfvars in the root of the cloned folder (see terraform.tfvars.example)
-* Set hst_max, hst_min and hst_des in terraform.tfvars to zero (0)
-* Make up a temporary reg_token in terraform.tfvars
+* Set `hst_max`, `hst_min` and `hst_des` in `terraform.tfvars` to zero (0)
+* Make up a temporary reg_token in `terraform.tfvars`
 * Run `terraform plan` from the root of the folder
 * Run `terraform apply` from the root of the folder
 * Wait until the installation has completed
 * Access Rancher server at the displayed output URL
-* Log in with the name and password specified in the terraform.tfvars file
+* Log in with the name and password specified in the `terraform.tfvars` file
 
 #### Stage Two
-* Enable hosts registration from within Rancher and copy the token from the registration string. The token will be in the format similar to *6C8B0D1B2E95DD1AA07A:1483142400000:PKQGzShMCv3wtD02DvlU4MkBY0*
-* Update reg_token in terraform.tfvars with the registration token
-* Update hst_max, hst_min and hst_des in terraform.tfvars with the max, min and desired amount of host instances
+* Enable hosts registration from within Rancher and copy the token from the registration string. The token will be in the format similar to `6C8B0D1B2E95DD1AA07A:1483142400000:PKQGzShMCv3wtD02DvlU4MkBY0`
+* Update `reg_token` in `terraform.tfvars` with the registration token
+* Update `hst_max`, `hst_min` and `hst_des` in `terraform.tfvars` with the max, min and desired amount of host instances
 * Re-run `terraform plan`
 * Re-run `terraform apply`
 * The launch configuration will be replaced with a new version and applied to the auto scaling group
