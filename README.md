@@ -38,8 +38,8 @@ The estimated deployment time from start to finish is 20-30 minutes.
 * Create terraform.tfvars in the root of the cloned folder (see terraform.tfvars.example)
 * Set hst_max, hst_min and hst_des in terraform.tfvars to zero (0)
 * Make up a temporary reg_token in terraform.tfvars
-* Run ***terraform plan*** from the root of the folder
-* Run ***terraform apply*** from the root of the folder
+* Run `terraform plan` from the root of the folder
+* Run `terraform apply` from the root of the folder
 * Wait until the installation has completed
 * Access Rancher server at the displayed output URL
 * Log in with the name and password specified in the terraform.tfvars file
@@ -48,13 +48,13 @@ The estimated deployment time from start to finish is 20-30 minutes.
 * Enable hosts registration from within Rancher and copy the token from the registration string. The token will be in the format similar to *6C8B0D1B2E95DD1AA07A:1483142400000:PKQGzShMCv3wtD02DvlU4MkBY0*
 * Update reg_token in terraform.tfvars with the registration token
 * Update hst_max, hst_min and hst_des in terraform.tfvars with the max, min and desired amount of host instances
-* Re-run ***terraform plan***
-* Re-run ***terraform apply***
+* Re-run `terraform plan`
+* Re-run `terraform apply`
 * The launch configuration will be replaced with a new version and applied to the auto scaling group
 * The specified amount of host instances will launch and register with the Rancher server
 
 #### How to remove
-* To remove all deployed resources run ***terraform destroy***
+* To remove all deployed resources run `terraform destroy`
 
 ### Supplemental
 *  [Container Clustering with Rancher Server (Part 5) – Automating the deployment of AWS infrastructure and Rancher with Terraform](https://skeltonthatcher.com/blog/container-clustering-rancher-server-part-5-automating-deployment-aws-infrastructure-rancher-terraform/)
