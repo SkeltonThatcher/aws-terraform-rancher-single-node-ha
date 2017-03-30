@@ -2,10 +2,12 @@
 
 variable "aws_access_key" {}
 variable "aws_secret_key" {}
+
 variable "aws_region" {
-  default = "eu-west-1"
+  default = "eu-central-1"
 }
-variable "key_pair" {}
+
+variable "key_name" {}
 
 variable "cidr_prefix" {
   default = "10.10"
@@ -15,6 +17,7 @@ variable "dns_zone" {}
 
 variable "ami_type" {
   type = "map"
+
   default = {
     eu-west-1    = "ami-de90bdb8"
     eu-west-2    = "ami-9bd6c3ff"
@@ -33,17 +36,21 @@ variable "srv_size" {
 variable "hst_size" {
   default = "t2.small"
 }
+
 variable "hst_max" {
   default = "0"
 }
+
 variable "hst_min" {
   default = "0"
 }
+
 variable "hst_des" {
   default = "0"
 }
+
 variable "reg_token" {
-  default = {123567890abcde.edcba0987654321.1234567890abcde}
+  default = "123567890abcde.edcba0987654321.1234567890abcde"
 }
 
 variable "db_name" {}

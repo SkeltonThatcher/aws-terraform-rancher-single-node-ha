@@ -46,9 +46,9 @@ data "template_file" "userdata_hst" {
 
   vars {
     # HostsReg
-    env_name     = "${var.env_name}"
-    dns_zone     = "${var.dns_zone}"
-    reg_token    = "${var.reg_token}"
+    env_name  = "${var.env_name}"
+    dns_zone  = "${var.dns_zone}"
+    reg_token = "${var.reg_token}"
   }
 }
 
@@ -57,7 +57,7 @@ data "template_file" "userdata_hst" {
 resource "aws_launch_configuration" "rancher_hst" {
   image_id                    = "${lookup(var.ami_type, var.aws_region)}"
   instance_type               = "${var.hst_size}"
-  key_pair                    = "${var.key_pair}"
+  key_name                    = "${var.key_name}"
   security_groups             = ["${aws_security_group.rancher_hst.id}"]
   associate_public_ip_address = true
 

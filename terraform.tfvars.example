@@ -1,7 +1,7 @@
 aws_access_key = "your_aws_access_key"
 aws_secret_key = "your_aws_secret_key"
 aws_region = "aws_region_to_use"
-key_pair = "an_existing_aws_ec2_keypair_for_the_region"
+key_name = "an_existing_aws_ec2_keypair_for_the_region"
 
 cidr_prefix = "two_block_cidr_prefix_for_the_vpc_such_as_10.20"
 

@@ -45,7 +45,7 @@ data "template_file" "userdata_srv" {
 resource "aws_launch_configuration" "rancher_srv" {
   image_id                    = "${lookup(var.ami_type, var.aws_region)}"
   instance_type               = "${var.srv_size}"
-  key_pair                    = "${var.key_pair}"
+  key_name                    = "${var.key_name}"
   security_groups             = ["${aws_security_group.rancher_srv.id}"]
   associate_public_ip_address = true
   user_data                   = "${data.template_file.userdata_srv.rendered}"
