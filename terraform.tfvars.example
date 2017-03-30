@@ -15,6 +15,7 @@ db_class = "db_class_such_as_db.t2.micro"
 db_storage = "amount_for_gb_of_db_storage"
 db_backup_retention = "amount_of_days_to_keep_db_backups"
 db_multi_az = "true_or_false_for_multi_or_single_az"
+db_final_snapshot = "true_or_false_for_yes_or_no"
 
 srv_size = "rancher_server_instance_size_such_as_t2.medium"
 
