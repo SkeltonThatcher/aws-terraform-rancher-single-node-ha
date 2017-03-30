@@ -52,6 +52,6 @@ resource "aws_db_instance" "rancher" {
   identifier                = "${var.env_name}-rancher"
   db_subnet_group_name      = "${aws_db_subnet_group.rancher.name}"
   vpc_security_group_ids    = ["${aws_security_group.rancher_db.id}"]
-  final_snapshot_identifier = "${var.db_name}-final"
+  final_snapshot_identifier = "${var.env_name}-snapshot"
   skip_final_snapshot       = "${var.db_final_snapshot}"
 }
