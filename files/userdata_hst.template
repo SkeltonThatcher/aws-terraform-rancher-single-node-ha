@@ -10,7 +10,7 @@ write_files:
       while ! ping -c 1 8.8.8.8 >/dev/null 2>&1; do echo 'waiting for net...'; sleep 2; done
 
       sleep 5
-      docker run -e CATTLE_HOST_LABELS='Name=rancher_hst' -d --privileged -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/rancher:/var/lib/rancher rancher/agent:v1.2.0 http://"${env_name}.${dns_zone}":8080/v1/scripts/"${reg_token}"
+      docker run -e CATTLE_HOST_LABELS='Name=rancher_hst' -d --privileged -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/rancher:/var/lib/rancher rancher/agent:stable http://"${env_name}.${dns_zone}":8080/v1/scripts/"${reg_token}"
       EOF
       sudo chmod +x /opt/rancher/bin/kickoff.sh
       sudo sh /opt/rancher/bin/kickoff.sh &

@@ -4,7 +4,7 @@ variable "aws_access_key" {}
 variable "aws_secret_key" {}
 
 variable "aws_region" {
-  default = "eu-central-1"
+  default = "eu-west-1"
 }
 
 variable "key_name" {}
@@ -19,9 +19,9 @@ variable "ami_type" {
   type = "map"
 
   default = {
-    eu-west-1    = "ami-de90bdb8"
-    eu-west-2    = "ami-9bd6c3ff"
-    eu-central-1 = "ami-835a90ec"
+    eu-west-1    = "ami-481e232e"
+    eu-west-2    = "ami-51776335"
+    eu-central-1 = "ami-a71ecfc8"
   }
 }
 
