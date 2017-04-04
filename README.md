@@ -2,6 +2,8 @@
 
 This repo contains Terraform code and supporting scripts to deploy single node HA Rancher server and Rancher hosts in AWS.
 
+## PLEASE NOTE - AS OF 4/4/17 - WORKS WITH RANCHER SERVER v1.4.2 AND BELOW ONLY
+
 The Terraform plan is designed to be applied in two stages. It will build out and deploy the following resources.
 
 * x1 VPC + IGW
