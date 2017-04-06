@@ -32,7 +32,7 @@ resource "aws_subnet" "pub_b" {
   }
 }
 
-# priv_ate subnets
+# Private subnets
 
 resource "aws_subnet" "priv_a" {
   vpc_id            = "${aws_vpc.rancher.id}"
