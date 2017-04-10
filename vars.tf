@@ -62,6 +62,7 @@ variable "db_class" {}
 variable "db_storage" {}
 variable "db_backup_retention" {}
 variable "db_multi_az" {}
+
 variable "db_final_snapshot" {
   default = "true"
 }

@@ -15,9 +15,9 @@ resource "aws_security_group" "rancher_srv" {
   }
 
   ingress {
-    from_port       = 8080
-    to_port         = 8080
-    protocol        = "tcp"
+    from_port   = 8080
+    to_port     = 8080
+    protocol    = "tcp"
     cidr_blocks = ["${var.my_ip}/32"]
   }
 
