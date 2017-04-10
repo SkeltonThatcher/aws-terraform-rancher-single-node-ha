@@ -19,9 +19,9 @@ variable "ami_type" {
   type = "map"
 
   default = {
-    eu-west-1    = "ami-52d1fe34"
-    eu-west-2    = "ami-8ac7d2ee"
-    eu-central-1 = "ami-9ccd18f3"
+    eu-west-1    = "ami-481e232e"
+    eu-west-2    = "ami-51776335"
+    eu-central-1 = "ami-a71ecfc8"
   }
 }
 
