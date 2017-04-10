@@ -65,6 +65,12 @@ resource "aws_autoscaling_group" "rancher_srv" {
   vpc_zone_identifier       = ["${aws_subnet.pub_a.id}", "${aws_subnet.pub_b.id}"]
   target_group_arns         = ["${aws_alb_target_group.rancher.id}"]
 
+  tag {
+    key                 = "Name"
+    value               = "${var.env_name}-rancher-srv"
+    propagate_at_launch = true
+  }
+
   provisioner "local-exec" {
     command = "./set_access_control.sh \"${var.rancher_admin_name}\" \"${var.rancher_admin_password}\" \"${var.rancher_admin_username}\" \"http://${var.env_name}.${data.aws_route53_zone.selected.name}:8080\""
   }
