@@ -81,6 +81,12 @@ resource "aws_autoscaling_group" "rancher_hst" {
   desired_capacity          = "${var.hst_des}"
   vpc_zone_identifier       = ["${aws_subnet.pub_a.id}", "${aws_subnet.pub_b.id}"]
 
+  tag {
+    key                 = "Name"
+    value               = "${var.env_name}-rancher-hst"
+    propagate_at_launch = true
+  }
+
   lifecycle {
     create_before_destroy = true
   }
