@@ -13,15 +13,17 @@ variable "cidr_prefix" {
   default = "10.10"
 }
 
+variable "my_ip" {}
+
 variable "dns_zone" {}
 
 variable "ami_type" {
   type = "map"
 
   default = {
-    eu-west-1    = "ami-481e232e"
-    eu-west-2    = "ami-51776335"
-    eu-central-1 = "ami-a71ecfc8"
+    eu-west-1    = "ami-52d1fe34"
+    eu-west-2    = "ami-8ac7d2ee"
+    eu-central-1 = "ami-9ccd18f3"
   }
 }
 

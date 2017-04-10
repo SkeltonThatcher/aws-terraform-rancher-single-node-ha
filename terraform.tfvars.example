@@ -5,6 +5,8 @@ key_name = "an_existing_aws_ec2_keypair_for_the_region"
 
 cidr_prefix = "two_block_cidr_prefix_for_the_vpc_such_as_10.20"
 
+my_ip = "your_external_ip_for_srv_security_group_ssh_testing"
+
 dns_zone = "existing_route_53_hosted_zone_such_as_mydomain.com"
 env_name = "environment_identifier_for_deployed_resources_and_the_dns_zone_sub_domain"
 

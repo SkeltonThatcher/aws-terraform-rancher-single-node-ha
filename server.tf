@@ -14,6 +14,13 @@ resource "aws_security_group" "rancher_srv" {
     security_groups = ["${aws_security_group.rancher_alb.id}"]
   }
 
+  ingress {
+    from_port       = 8080
+    to_port         = 8080
+    protocol        = "tcp"
+    cidr_blocks = ["${var.my_ip}/32"]
+  }
+
   egress {
     from_port   = 0
     to_port     = 0
