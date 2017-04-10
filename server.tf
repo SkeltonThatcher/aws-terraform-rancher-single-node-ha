@@ -33,7 +33,7 @@ data "template_file" "userdata_srv" {
 
   vars {
     # Database
-    database_address  = "${aws_db_instance.rancher.endpoint}"
+    database_address  = "${aws_db_instance.rancher.address}"
     database_name     = "${var.db_name}"
     database_username = "${var.db_username}"
     database_password = "${var.db_password}"
