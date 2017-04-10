@@ -30,7 +30,7 @@ The estimated deployment time from start to finish is 20-30 minutes.
 
 #### Version advisories
 
-* RancherOS v0.8.1
+* RancherOS v0.9.1
 * Rancher server v1.5.3
 * Rancher agent v1.2.1
 
