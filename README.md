@@ -2,8 +2,6 @@
 
 This repo contains Terraform code and supporting scripts to deploy single node HA Rancher server and Rancher hosts in AWS.
 
-## Version advisory - Tested with Rancher server v1.5.3 and Rancher agent v1.2.1
-
 The Terraform plan is designed to be applied in two stages. It will build out and deploy the following resources.
 
 * x1 VPC + IGW
@@ -29,6 +27,10 @@ The estimated deployment time from start to finish is 20-30 minutes.
 * Terraform installed and configured
 
 ### How to use the Terraform plan to deploy Rancher server and Rancher hosts
+
+#### Version advisory 
+
+* Tested to Rancher server v1.5.3 and Rancher agent v1.2.1
 
 #### Stage One
 
